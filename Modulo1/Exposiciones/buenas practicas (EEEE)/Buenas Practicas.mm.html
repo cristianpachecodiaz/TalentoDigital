@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Buenas Pr&#225;cticas de Programaci&#243;n </title>
+<style type="text/css">
+    li { list-style: none;  margin: 0; }
+    p { margin: 0; }
+    span.foldopened { color: white; font-size: xx-small;
+    border-width: 1; font-family: monospace; padding: 0em 0.25em 0em 0.25em; background: #e0e0e0;
+    VISIBILITY: visible;
+    cursor:pointer; }
+
+
+    span.foldclosed { color: #666666; font-size: xx-small;
+    border-width: 1; font-family: monospace; padding: 0em 0.25em 0em 0.25em; background: #e0e0e0;
+    VISIBILITY: hidden;
+    cursor:pointer; }
+
+    span.foldspecial { color: #666666; font-size: xx-small; border-style: none solid solid none;
+    border-color: #CCCCCC; border-width: 1; font-family: sans-serif; padding: 0em 0.1em 0em 0.1em; background: #e0e0e0;
+    cursor:pointer; }
+
+    span.l { color: red; font-weight: bold; }
+
+    a.mapnode:link {text-decoration: none; color: black; }
+    a.mapnode:visited {text-decoration: none; color: black; }
+    a.mapnode:active {text-decoration: none; color: black; }
+    a.mapnode:hover {text-decoration: none; color: black; background: #eeeee0; }
+
+</style>
+<!-- ^ Position is not set to relative / absolute here because of Mozilla -->
+</head>
+<body>
+
+<script type="text/javascript">
+   // Here we implement folding. It works fine with MSIE5.5, MSIE6.0 and
+   // Mozilla 0.9.6.
+
+   if (document.layers) {
+      //Netscape 4 specific code
+      pre = 'document.';
+      post = ''; }
+   if (document.getElementById) {
+      //Netscape 6 specific code
+      pre = 'document.getElementById("';
+      post = '").style'; }
+   if (document.all) {
+      //IE4+ specific code
+      pre = 'document.all.';
+      post = '.style'; }
+
+function layer_exists(layer) {
+   try {
+      eval(pre + layer + post);
+      return true; }
+   catch (error) {
+      return false; }}
+
+function show_layer(layer) {
+   eval(pre + layer + post).position = 'relative'; 
+   eval(pre + layer + post).visibility = 'visible'; }
+
+function hide_layer(layer) {
+   eval(pre + layer + post).visibility = 'hidden';
+   eval(pre + layer + post).position = 'absolute'; }
+
+function hide_folder(folder) {
+    hide_folding_layer(folder)
+    show_layer('show'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+}
+
+function show_folder(folder) {
+    // Precondition: all subfolders are folded
+
+    show_layer('hide'+folder);
+    hide_layer('show'+folder);
+    show_layer('fold'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+
+    var i;
+    for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       show_layer('show'+folder+'_'+i); }
+}
+function show_folder_completely(folder) {
+    // Precondition: all subfolders are folded
+
+    show_layer('hide'+folder);
+    hide_layer('show'+folder);
+    show_layer('fold'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+
+    var i;
+    for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       show_folder_completely(folder+'_'+i); }
+}
+
+
+
+function hide_folding_layer(folder) {
+   var i;
+   for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       hide_folding_layer(folder+'_'+i); }
+
+   hide_layer('hide'+folder);
+   hide_layer('show'+folder);
+   hide_layer('fold'+folder);
+
+   scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+}
+
+function fold_document() {
+   var i;
+   var folder = '1';
+   for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       hide_folder(folder+'_'+i); }
+}
+
+function unfold_document() {
+   var i;
+   var folder = '1';
+   for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       show_folder_completely(folder+'_'+i); }
+}
+
+</script>
+<SPAN class="foldspecial" onclick="fold_document()">All +</SPAN>
+<SPAN class="foldspecial" onclick="unfold_document()">All -</SPAN>
+<p>Buenas Pr&#225;cticas de Programaci&#243;n 
+<ul><li><span id="show1_1" class="foldclosed" onClick="show_folder('1_1')" style="POSITION: absolute">+</span> <span id="hide1_1" class="foldopened" onClick="hide_folder('1_1')">-</span>
+FreeMind (CRISTIAN)
+<ul id="fold1_1" style="POSITION: relative; VISIBILITY: visible;"><li>&#xa;    <p style="margin-top: 0; margin-bottom: 0; margin-right: 0px; margin-left: 0px; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; background-color: rgb(255, 255, 255)">&#xa;      <b>FreeMind</b>&#160;es un software que permite la elaboraci&#243;n de&#160;<a href="https://es.wikipedia.org/wiki/Mapa" title="Mapa" style="text-decoration: none; color: rgb(11, 0, 128); background-image: null; background-repeat: repeat; background-attachment: scroll; background-position: null"><font color="rgb(11, 0, 128)">mapas</font></a>&#160;mentales o de conceptos, programada en&#160;<a href="https://es.wikipedia.org/w/index.php?title=Google_(lenguaje_de_programaci%C3%B3n)&amp;action=edit&amp;redlink=1" class="new" title="Google (lenguaje de programaci&#xf3;n) (a&#xfa;n no redactado)" style="text-decoration: none; color: rgb(165, 88, 88); background-image: null; background-repeat: repeat; background-attachment: scroll; background-position: null"><font color="rgb(165, 88, 88)">Java</font></a>. Se publica bajo licencia&#160;<a href="https://es.wikipedia.org/wiki/GNU_General_Public_License" title="GNU General Public License" style="text-decoration: none; color: rgb(11, 0, 128); background-image: null; background-repeat: repeat; background-attachment: scroll; background-position: null"><font color="rgb(11, 0, 128)">GNU o General Public License</font></a>. Esta disponible para<a href="https://es.wikipedia.org/wiki/Microsoft_Windows" title="Microsoft Windows" style="text-decoration: none; color: rgb(11, 0, 128); background-image: null; background-repeat: repeat; background-attachment: scroll; background-position: null"><font color="rgb(11, 0, 128)">t Windows</font></a>,&#160;<a href="https://es.wikipedia.org/wiki/Linux" class="mw-redirect" title="Linux" style="text-decoration: none; color: rgb(11, 0, 128); background-image: null; background-repeat: repeat; background-attachment: scroll; background-position: null"><font color="rgb(11, 0, 128)">Linux</font></a>&#160;y&#160;<a href="https://es.wikipedia.org/wiki/Mac_OS_X" class="mw-redirect" title="Mac OS X" style="text-decoration: none; color: rgb(11, 0, 128); background-image: null; background-repeat: repeat; background-attachment: scroll; background-position: null"><font color="rgb(11, 0, 128)">Mac OS X</font></a>&#160;v&#237;a&#160;<a href="https://es.wikipedia.org/wiki/Java_Runtime_Environment" title="Java Runtime Environment" style="text-decoration: none; color: rgb(11, 0, 128); background-image: null; background-repeat: repeat; background-attachment: scroll; background-position: null"><font color="rgb(11, 0, 128)">Java Runtime Environment</font></a>.<sup id="cite_ref-LinuxWorld_3-0" class="reference separada" style="line-height: 1em; white-space: nowrap; font-weight: normal; font-style: normal; margin-right: 0"><a href="https://es.wikipedia.org/wiki/FreeMind#cite_note-LinuxWorld-3" style="text-decoration: none; color: rgb(11, 0, 128); background-image: null; background-repeat: repeat; background-attachment: scroll; background-position: null; white-space: nowrap"><font color="rgb(11, 0, 128)">3</font></a></sup>&#8203;<sup id="cite_ref-LinuxLinks_4-0" class="reference separada" style="line-height: 1em; white-space: nowrap; font-weight: normal; font-style: normal; margin-right: 0"><a href="https://es.wikipedia.org/wiki/FreeMind#cite_note-LinuxLinks-4" style="text-decoration: none; color: rgb(11, 0, 128); background-image: null; background-repeat: repeat; background-attachment: scroll; background-position: null; white-space: nowrap"><font color="rgb(11, 0, 128)">4</font></a></sup>&#8203;<sup id="cite_ref-InnovationTools_5-0" class="reference separada" style="line-height: 1em; white-space: nowrap; font-weight: normal; font-style: normal; margin-right: 0"><a href="https://es.wikipedia.org/wiki/FreeMind#cite_note-InnovationTools-5" style="text-decoration: none; color: rgb(11, 0, 128); background-image: null; background-repeat: repeat; background-attachment: scroll; background-position: null; white-space: nowrap"><font color="rgb(11, 0, 128)">5</font></a></sup>&#8203;&#xa;    </p>&#xa;    <p style="margin-top: 0; margin-bottom: 0; margin-right: 0px; margin-left: 0px; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; background-color: rgb(255, 255, 255)">&#xa;      FreeMind es &#250;til en el an&#225;lisis y recopilaci&#243;n de informaci&#243;n o ideas generadas en grupos de trabajo, pues con &#233;l es posible generar mapas mentales y publicarlos en internet como p&#225;ginas&#160;<a href="https://es.wikipedia.org/wiki/Html" class="mw-redirect" title="Html" style="text-decoration: none; color: rgb(11, 0, 128); background-image: null; background-repeat: repeat; background-attachment: scroll; background-position: null"><font color="rgb(11, 0, 128)">html</font></a>,&#160;<a href="https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n)" title="Java (lenguaje de programaci&#xf3;n)" style="text-decoration: none; color: rgb(11, 0, 128); background-image: null; background-repeat: repeat; background-attachment: scroll; background-position: null"><font color="rgb(11, 0, 128)">java, etc.</font></a>&#xa;    </p>&#xa;    <p style="margin-top: 0; margin-bottom: 0; margin-right: 0px; margin-left: 0px; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; background-color: rgb(255, 255, 255)">&#xa;      FreeMind permite al usuario editar un conjunto de ideas jer&#225;rquizadas alrededor de un concepto central. El enfoque no lineal ayuda al&#160;<a href="https://es.wikipedia.org/wiki/Brainstorming" class="mw-redirect" title="Brainstorming" style="text-decoration: none; color: rgb(11, 0, 128); background-image: null; background-repeat: repeat; background-attachment: scroll; background-position: null"><font color="rgb(11, 0, 128)">brainstorming</font></a>, a medida que las ideas se van a&#241;adiendo al mapa mental.&#160;Como aplicaci&#243;n Java que es, FreeMind es portable a trav&#233;s de&#160;<a href="https://es.wikipedia.org/wiki/Multiplataforma" title="Multiplataforma" style="text-decoration: none; color: rgb(11, 0, 128); background-image: null; background-repeat: repeat; background-attachment: scroll; background-position: null"><font color="rgb(11, 0, 128)">m&#250;ltiples plataformas</font></a>&#160;y retiene la misma&#160;<a href="https://es.wikipedia.org/wiki/Interfaz_de_usuario" title="Interfaz de usuario" style="text-decoration: none; color: rgb(11, 0, 128); background-image: null; background-repeat: repeat; background-attachment: scroll; background-position: null"><font color="rgb(11, 0, 128)">interfaz de usuario</font></a>, con solo una cierta variaci&#243;n de la interfaz com&#250;n en cada sistema operativo.&#xa;    </p>&#xa;    <p style="margin-top: 0; margin-bottom: 0; margin-right: 0px; margin-left: 0px; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; background-color: rgb(255, 255, 255)">&#xa;      &#xa;    </p>&#xa;  
+</li>
+</ul>
+</li>
+<li><span id="show1_2" class="foldclosed" onClick="show_folder('1_2')" style="POSITION: absolute">+</span> <span id="hide1_2" class="foldopened" onClick="hide_folder('1_2')">-</span>
+Introducci&#243;n (CRISTIAN)
+<ul id="fold1_2" style="POSITION: relative; VISIBILITY: visible;"><li>&#xa;    <img src="introduccion.JPG" >&#xa;  
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_3" class="foldclosed" onClick="show_folder('1_3')" style="POSITION: absolute">+</span> <span id="hide1_3" class="foldopened" onClick="hide_folder('1_3')">-</span>
+Convenciones de Nomenclatura generales (DAM)
+<ul id="fold1_3" style="POSITION: relative; VISIBILITY: visible;"><li>&#xa;    <img src="convenciones%20generales.JPG" >&#xa;  
+</li>
+</ul>
+</li>
+<li><span id="show1_4" class="foldclosed" onClick="show_folder('1_4')" style="POSITION: absolute">+</span> <span id="hide1_4" class="foldopened" onClick="hide_folder('1_4')">-</span>
+Normativas Archivos Java (OCTAVIO)
+<ul id="fold1_4" style="POSITION: relative; VISIBILITY: visible;"><li>&#xa;    <img src="normativas%20archivos.JPG" >&#xa;  
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_5" class="foldclosed" onClick="show_folder('1_5')" style="POSITION: absolute">+</span> <span id="hide1_5" class="foldopened" onClick="hide_folder('1_5')">-</span>
+Normativas Sentencias Java (JOSE)
+<ul id="fold1_5" style="POSITION: relative; VISIBILITY: visible;"><li>&#xa;    <img src="normativas%20sentencias.JPG" >&#xa;  
+</li>
+</ul>
+</li>
+<li><span id="show1_6" class="foldclosed" onClick="show_folder('1_6')" style="POSITION: absolute">+</span> <span id="hide1_6" class="foldopened" onClick="hide_folder('1_6')">-</span>
+Normativas Variables Java (CECILIA)
+<ul id="fold1_6" style="POSITION: relative; VISIBILITY: visible;"><li>&#xa;    <img src="normativas%20variables.JPG" >&#xa;  
+</li>
+</ul>
+</li>
+
+</ul><SCRIPT type="text/javascript">
+fold_document();
+</SCRIPT>
+</body>
+</html>
