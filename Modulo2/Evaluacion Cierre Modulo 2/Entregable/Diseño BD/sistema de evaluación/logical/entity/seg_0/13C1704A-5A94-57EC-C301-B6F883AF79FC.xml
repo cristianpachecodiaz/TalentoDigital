@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="13C1704A-5A94-57EC-C301-B6F883AF79FC" name="unidad">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-12 23:45:01 UTC</createdTime>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<engineerTo>
+<item key="49CD31C1-6733-AD17-DFC6-C784B965E618" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idUnidad" id="AA73A754-EF25-15CF-BFCC-309EEF4EC903">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-12 23:45:06 UTC</createdTime>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<engineerTo>
+<item key="49CD31C1-6733-AD17-DFC6-C784B965E618" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="D62D2A89-145B-74C0-EBF2-738D595D95E3">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-12 23:45:19 UTC</createdTime>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<engineerTo>
+<item key="49CD31C1-6733-AD17-DFC6-C784B965E618" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idPrograma" id="42770141-0F98-4FAB-7779-4A864F38B786">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-12 23:48:30 UTC</createdTime>
+<generatorID>52EC94A6-0A82-97CB-4709-34FE532FB960</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<engineerTo>
+<item key="49CD31C1-6733-AD17-DFC6-C784B965E618" value="true"/>
+</engineerTo>
+<referedAttribute>92D4D570-6A1B-D559-3F2E-555038454FD0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7EE1270A-AC3E-2248-F391-3939B2ED0087" name="unidad PK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-12 23:45:16 UTC</createdTime>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<engineerTo>
+<item key="49CD31C1-6733-AD17-DFC6-C784B965E618" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AA73A754-EF25-15CF-BFCC-309EEF4EC903</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

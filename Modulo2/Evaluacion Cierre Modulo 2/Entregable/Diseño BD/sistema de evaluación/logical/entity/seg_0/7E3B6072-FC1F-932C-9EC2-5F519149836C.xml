@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7E3B6072-FC1F-932C-9EC2-5F519149836C" name="resultado_test">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 00:30:34 UTC</createdTime>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<engineerTo>
+<item key="72788194-F2A6-87FE-0CD9-383F9A18E461" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="rut" id="21F36050-5827-7466-2B4E-3256FB1B5F02">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 00:32:13 UTC</createdTime>
+<generatorID>97B77140-03CA-9EA8-DE21-528CB633E8CE</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<engineerTo>
+<item key="72788194-F2A6-87FE-0CD9-383F9A18E461" value="true"/>
+</engineerTo>
+<referedAttribute>A2B8F602-8C2C-F106-9E8C-B98E0DF1332B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idTest" id="F85A030D-6FDB-448D-4306-A9876746FD46">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 00:32:19 UTC</createdTime>
+<generatorID>F6060252-0C10-C88F-79A3-525628EA6256</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<engineerTo>
+<item key="72788194-F2A6-87FE-0CD9-383F9A18E461" value="true"/>
+</engineerTo>
+<referedAttribute>257225E1-FBC2-DC28-1BF3-F01AB37B78FF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idPregunta" id="9F7D8E44-A7E5-F35A-9D6B-76294D79EE63">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 00:33:21 UTC</createdTime>
+<generatorID>DAA39285-E48E-B961-7E40-F68B352B27E2</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<engineerTo>
+<item key="72788194-F2A6-87FE-0CD9-383F9A18E461" value="true"/>
+</engineerTo>
+<referedAttribute>430C5A82-EE7E-FA69-CA63-25A00F13CD8F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="respuesta" id="ACE33FD9-C337-C27B-ED33-65AB10938E58">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 00:34:03 UTC</createdTime>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<engineerTo>
+<item key="72788194-F2A6-87FE-0CD9-383F9A18E461" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="puntaje" id="AF25ACFC-11DA-A716-324C-0093FE0D5FB2">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 00:34:23 UTC</createdTime>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<engineerTo>
+<item key="72788194-F2A6-87FE-0CD9-383F9A18E461" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4DE9C371-CD29-2FB9-3BF9-1335D5ECCE84" name="resultado_test PK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-03-13 00:33:38 UTC</createdTime>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<engineerTo>
+<item key="72788194-F2A6-87FE-0CD9-383F9A18E461" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F85A030D-6FDB-448D-4306-A9876746FD46</attributeRef>
+<attributeRef>21F36050-5827-7466-2B4E-3256FB1B5F02</attributeRef>
+<attributeRef>9F7D8E44-A7E5-F35A-9D6B-76294D79EE63</attributeRef>
+<attributeRef>ACE33FD9-C337-C27B-ED33-65AB10938E58</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

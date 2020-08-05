@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CA8CB895-F2BF-4BA6-F86D-737D57C0FBA3" name="estudiante">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-08 01:48:51 UTC</createdTime>
+<generatorID>4F73588A-4AE2-D402-73BA-A9D03C74A946</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="rut" id="0223DAEE-713C-28E0-3BD8-A429F8CFA03F">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-08 01:48:51 UTC</createdTime>
+<generatorID>A2B8F602-8C2C-F106-9E8C-B98E0DF1332B</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="D5A464A1-A975-D0F3-3856-3C09516F3FF8">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-08 01:48:51 UTC</createdTime>
+<generatorID>6CE83D47-65EF-C535-EC31-449867640722</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellido1" id="96979BCA-0B51-5716-1DB9-613E1EAAA9BF">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-08 01:48:51 UTC</createdTime>
+<generatorID>43696EA5-8ECE-AE7F-CA32-72BC429B4A07</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellido2" id="E0F52EE8-5ACA-96D8-A67F-A681313CE9B3">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-08 01:48:51 UTC</createdTime>
+<generatorID>3E32AE4D-069A-6FC4-B53D-55C256A3ECC3</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="programa_idPrograma" id="B8985C8B-86C2-EF04-3735-4270531AD126">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-08 01:48:51 UTC</createdTime>
+<generatorID>C62E55D0-5A01-0D63-65CE-7F0390F779B3</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A938781B-97D9-CD82-30ED-F6084A76B88B" referredColumn="AB496690-F5E5-862F-BA00-9F871333D1F2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4CC93BB7-8F75-73D4-865D-0DD808FF125A" name="estudiante_PK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-08 01:48:51 UTC</createdTime>
+<generatorID>EE81BD21-C83A-E75B-7697-57025EE8EB0C</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0223DAEE-713C-28E0-3BD8-A429F8CFA03F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9DA15867-46CB-F5E8-FF26-79185F35F83C" name="estudiante_programa_FK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-08 01:48:51 UTC</createdTime>
+<generatorID>FE5FC577-C68B-0177-070E-0BBA0168A764</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B8985C8B-86C2-EF04-3735-4270531AD126"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

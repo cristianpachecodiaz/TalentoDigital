@@ -1,0 +1,151 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F41C311F-A05A-37B7-5718-FA842EAD3F9C" name="test">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-10 18:03:06 UTC</createdTime>
+<generatorID>04836962-E45F-F9EE-2387-6D81A941EB3E</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idTest" id="A0E65979-6FF3-4760-4E2E-475DF694038C">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-10 18:03:06 UTC</createdTime>
+<generatorID>257225E1-FBC2-DC28-1BF3-F01AB37B78FF</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="F9CB3D1E-19C0-FF57-2D84-FA76A8A06CF2">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-10 18:03:06 UTC</createdTime>
+<generatorID>8142DC1E-C827-ABFD-ABA0-8B5DA58F2BB5</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="12815642-AF9D-E442-A337-AEA2D0854F99">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-10 18:03:06 UTC</createdTime>
+<generatorID>FE9B2AD1-9A46-F003-C40A-3B10F35EC483</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="autor" id="0676AEC4-149A-CF00-E461-9599C0F41324">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-10 18:03:06 UTC</createdTime>
+<generatorID>46A00A4B-2938-8077-7F09-3F5677F91F05</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fechaCreacion" id="8CA112BB-4E42-6810-6C2D-757F047585B7">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-10 18:03:06 UTC</createdTime>
+<generatorID>FC2B5F8D-4FAD-1FED-E2FF-B785D7644F74</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="programa_idPrograma" id="3F4C056D-C55B-C560-3573-9C48FF5F5C4A">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-10 18:03:06 UTC</createdTime>
+<generatorID>CE81D1B5-151F-116E-6CC0-0E351CF3FAEB</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="27FB879C-8859-432F-6438-007A46627502" referredColumn="BA5FBD41-08A2-0B58-7AFD-0D6B3A71F1EC"/>
+</associations>
+</Column>
+<Column name="unidad_idUnidad" id="A54D5D2D-4FB0-0BB3-F865-C91367A15B4A">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-10 18:03:06 UTC</createdTime>
+<generatorID>D243EFD2-8F6E-D4F9-436F-11D5399BDDD5</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0F839120-F57B-2F67-5D48-A52D01CF167D" referredColumn="D932B599-7EB0-78CB-A43F-4387EB64A98C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1E603D18-F326-C78A-95EB-E0BF8DD98A91" name="test_PK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-10 18:03:06 UTC</createdTime>
+<generatorID>0049AB78-4208-0023-E560-D93D1B1C3C81</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A0E65979-6FF3-4760-4E2E-475DF694038C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="595966C4-2341-8FCD-7D88-D5A6A967BC3A" name="test__IDX">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-10 18:03:06 UTC</createdTime>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>C27F4340-EE6B-505D-53DA-3A977755BB98</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="A54D5D2D-4FB0-0BB3-F865-C91367A15B4A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="29075A2E-8EA6-BAE2-BE9A-8F369FC2AF4B" name="test_unidad_FK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-10 18:03:06 UTC</createdTime>
+<generatorID>C27F4340-EE6B-505D-53DA-3A977755BB98</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A54D5D2D-4FB0-0BB3-F865-C91367A15B4A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="08F08C90-6805-0AAB-5831-6A6E4F53370B" name="test_programa_FK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-10 18:03:06 UTC</createdTime>
+<generatorID>C48FCED5-C4AB-6012-4503-670491766D3B</generatorID>
+<ownerDesignName>sistema de evaluación</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3F4C056D-C55B-C560-3573-9C48FF5F5C4A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
